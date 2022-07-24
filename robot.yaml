@@ -1,0 +1,22 @@
+tasks:
+  Run all tasks:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+
+  Open Browser:
+    robotTaskName: Open QA4 Server
+
+  Login the Website:
+    robotTaskName: Click Element
+
+  Home Page Details:
+    robotTaskName: Person Details
+
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - .
+ignoreFiles:
+  - .gitignore
