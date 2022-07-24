@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.7.5 on win32)" generated="20220719 20:15:51.821" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="c:\RPA_Automation\tasks.robot">
+<test id="s1-t1" name="Open Training Webiste" line="31">
+<kw name="Open the Browser">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${url}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220719 20:15:54.496" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220719 20:15:54.545" level="INFO">Created download root directory: C:\Users\TAIMUR\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220719 20:15:54.545" level="INFO">Created symlink directory: C:\Users\TAIMUR\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220719 20:15:54.546" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220719 20:15:55.796" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220719 20:15:55.796" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220719 20:15:55.796" level="INFO">Opening url 'https://robotsparebinindustries.com/#/'</msg>
+<status status="PASS" starttime="20220719 20:15:54.496" endtime="20220719 20:15:57.987"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220719 20:15:57.987" endtime="20220719 20:15:58.120"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220719 20:16:01.126" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220719 20:15:58.121" endtime="20220719 20:16:01.126"/>
+</kw>
+<status status="PASS" starttime="20220719 20:15:54.495" endtime="20220719 20:16:01.127"/>
+</kw>
+<kw name="Login the Website">
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${usernameTab}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:01.130" level="INFO">Clicking element 'id:username'.</msg>
+<status status="PASS" starttime="20220719 20:16:01.129" endtime="20220719 20:16:01.198"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${usernameTab}</arg>
+<arg>maria</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:01.200" level="INFO">Typing text 'maria' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20220719 20:16:01.199" endtime="20220719 20:16:01.278"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${password}</arg>
+<arg>thoushallnotpass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:01.279" level="INFO">Typing text 'thoushallnotpass' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20220719 20:16:01.278" endtime="20220719 20:16:01.394"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:01.397" level="INFO">Clicking button 'xpath=//button[contains(text(),'Log in')]'.</msg>
+<status status="PASS" starttime="20220719 20:16:01.395" endtime="20220719 20:16:01.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220719 20:16:02.482" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220719 20:16:01.479" endtime="20220719 20:16:02.482"/>
+</kw>
+<status status="PASS" starttime="20220719 20:16:01.127" endtime="20220719 20:16:02.482"/>
+</kw>
+<kw name="Home Page Details">
+<kw name="Click Button When Visible" library="RPA.Browser.Selenium">
+<arg>${firstName}</arg>
+<doc>Click button identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20220719 20:16:02.522" level="INFO">Clicking button 'id:firstname'.</msg>
+<status status="PASS" starttime="20220719 20:16:02.483" endtime="20220719 20:16:02.591"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${firstName}</arg>
+<arg>Taimur</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:02.593" level="INFO">Typing text 'Taimur' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20220719 20:16:02.591" endtime="20220719 20:16:02.682"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${lastName}</arg>
+<arg>Ali</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:02.684" level="INFO">Typing text 'Ali' into text field 'name:lastname'.</msg>
+<status status="PASS" starttime="20220719 20:16:02.683" endtime="20220719 20:16:02.816"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${clickontarget}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:02.818" level="INFO">Clicking element 'id:salestarget'.</msg>
+<status status="PASS" starttime="20220719 20:16:02.817" endtime="20220719 20:16:02.917"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${salesTarget}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20220719 20:16:02.973" level="INFO">Clicking element 'xpath=//select[@id='salestarget']/option[2]'.</msg>
+<status status="PASS" starttime="20220719 20:16:02.917" endtime="20220719 20:16:03.037"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${salesResult}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:03.040" level="INFO">Clicking element 'id:salesresult'.</msg>
+<status status="PASS" starttime="20220719 20:16:03.038" endtime="20220719 20:16:03.116"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${salesResult}</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:03.120" level="INFO">Typing text '12345' into text field 'id:salesresult'.</msg>
+<status status="PASS" starttime="20220719 20:16:03.117" endtime="20220719 20:16:03.211"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${submitButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220719 20:16:03.212" level="INFO">Clicking button 'xpath=//button[contains(text(),'Submit')]'.</msg>
+<status status="PASS" starttime="20220719 20:16:03.211" endtime="20220719 20:16:03.577"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220719 20:16:08.581" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220719 20:16:03.577" endtime="20220719 20:16:08.581"/>
+</kw>
+<status status="PASS" starttime="20220719 20:16:02.482" endtime="20220719 20:16:08.582"/>
+</kw>
+<status status="PASS" starttime="20220719 20:15:54.492" endtime="20220719 20:16:08.583"/>
+</test>
+<doc>Practice setup from my github repository: RPA_Automation.
+Branch: RPA_Practice.</doc>
+<status status="PASS" starttime="20220719 20:15:51.826" endtime="20220719 20:16:08.586"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220719 20:15:54.341" level="WARN">C:\ProgramData\robocorp\ht\2f498bf_b1f3c24_791b5f1e\lib\site-packages\RPA\Desktop\Windows.py:210: FutureWarning: `RPA.Desktop.Windows` got deprecated and will be no longer maintained, please use `RPA.Windows` instead (https://robocorp.com/docs/libraries/rpa-framework/rpa-windows)
+  "`RPA.Desktop.Windows` got deprecated and will be no longer maintained, "
+</msg>
+</errors>
+</robot>
